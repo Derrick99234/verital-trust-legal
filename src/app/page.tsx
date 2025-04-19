@@ -1,55 +1,68 @@
 import Image from "next/image";
-import { LuPhone } from "react-icons/lu";
-import { TbClockHour8 } from "react-icons/tb";
-import { CgArrowLongLeftL } from "react-icons/cg";
-import Link from "next/link";
-import { IoIosSquare } from "react-icons/io";
+import { GoLaw } from "react-icons/go";
+import { FaAward } from "react-icons/fa";
+import { TbWorldCheck } from "react-icons/tb";
+import Header from "./components/Header/Header";
+import Section2 from "./components/Section2";
 
 export default function Home() {
   return (
-    <main>
-      <header className="flex h-20">
-        <h2 className="font-mono w-[100px] flex justify-center items-center text-2xl font-semibold">
-          LOGO
-        </h2>
-        <nav className="w-full">
-          <div className=" flex gap-3 border-b-2 p-1 pl-5">
-            <div className="flex gap-2 items-center">
-              <LuPhone /> +234 916 1965 510
-            </div>
-            <div className="flex gap-2 items-center">
-              <TbClockHour8 /> Mon - Fri 7:30am - 6:30pm
-            </div>
-          </div>
-          <div className="p-1 pl-5 flex items-center justify-between">
-            <ul className="flex gap-4 items-center">
-              <li>
-                <Link href="#" className="flex items-center gap-2">
-                  <CgArrowLongLeftL /> Home
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="flex items-center gap-2">
-                  <IoIosSquare /> About
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="flex items-center gap-2">
-                  <IoIosSquare /> Career
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="flex items-center gap-2">
-                  <IoIosSquare /> Contact
-                </Link>
-              </li>
-            </ul>
-            <button className="py-2 px-5 border border-amber-700 text-amber-700 font-semibold">
-              Free consulation
+    <>
+      <Header />
+      <main>
+        <section
+          style={{
+            backgroundImage:
+              'url("https://cdn.pixabay.com/photo/2019/11/11/10/05/law-4617873_640.jpg")',
+            backgroundSize: "cover",
+            position: "relative",
+            backgroundPosition: "center",
+            width: "100%",
+            height: "90vh",
+          }}
+          className="flex justify-between items-center px-10 text-white"
+        >
+          <div className="absolute bg-red-900/60 inset-0"></div>
+          <div className="z-50">
+            <span className="text-lg uppercase font-mono">
+              Home of Law & Orders
+            </span>
+            <h2 className="text-6xl my-3 font-semibold">EXPERTS OF JUSTICE</h2>
+            <p className="text-sm max-w-lg">
+              Diam leo vitae tortor mauris faucibus odio nullam enim. At dolor
+              pellentesque eget et purus. Purus mauris eget maecenas placerat
+              vehicula tortor massa.
+            </p>
+            <button className="mt-16 py-2 px-14 bg-red-800 text-white">
+              Explores
             </button>
           </div>
-        </nav>
-      </header>
-    </main>
+        </section>
+        <section className="bg-red-900 text-white flex items-center justify-around p-10">
+          <div className="flex items-center justify-center gap-3">
+            <GoLaw className="text-6xl" />
+            <div className="">
+              <h2 className="text-xl">Best Law Firm</h2>
+              <span className="text-xs">45 Years of Experience</span>
+            </div>
+          </div>
+          <div className="flex items-center justify-center gap-3">
+            <FaAward className="text-6xl" />
+            <div className="">
+              <h2 className="text-xl">Best Law Firm</h2>
+              <span className="text-xs">45 Years of Experience</span>
+            </div>
+          </div>
+          <div className="flex items-center justify-center gap-3">
+            <TbWorldCheck className="text-6xl" />
+            <div className="">
+              <h2 className="text-xl">Best Law Firm</h2>
+              <span className="text-xs">45 Years of Experience</span>
+            </div>
+          </div>
+        </section>
+        <Section2 />
+      </main>
+    </>
   );
 }
