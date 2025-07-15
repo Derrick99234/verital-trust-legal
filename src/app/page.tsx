@@ -4,6 +4,8 @@ import { FaAward } from "react-icons/fa";
 import { TbWorldCheck } from "react-icons/tb";
 import Header from "./components/Header/Header";
 import Section2 from "./components/Section2";
+import Section3 from "./components/Section3";
+import Section4 from "./components/Section4";
 
 export default function Home() {
   return (
@@ -62,6 +64,8 @@ export default function Home() {
           </div>
         </section>
         <Section2 />
+        <Section3 />
+        <Section4 />
       </main>
     </>
   );

@@ -4,12 +4,19 @@ import { TbClockHour8 } from "react-icons/tb";
 import { CgArrowLongLeftL } from "react-icons/cg";
 import Link from "next/link";
 import { IoIosSquare } from "react-icons/io";
+import Image from "next/image";
 
 function Header() {
   return (
     <header className="flex min-h-20">
       <h2 className="font-mono w-[100px] flex justify-center items-center text-2xl font-semibold border-r border-red-700">
-        LOGO
+        <Image
+          src="/images/verital-trust.png"
+          alt="Logo"
+          width={70}
+          height={70}
+          className="rounded-full"
+        />
       </h2>
       <nav className="w-full">
         <div className=" flex gap-3 border-b p-2 pl-5 border-red-700">
